@@ -12,6 +12,27 @@ div.pedido-texto button{
 footer{
 	color:white;
 }
-.PedidoBuscador{
+
+.botonAgregar{
+	display:block;
+	width:100%;
 	
+}
+#idCategoria{
+	padding-bottom:10px;
+}
+#idCantidad{
+	margin-top:0px;
+	padding-top:10px;
+}
+#idAgregar{
+	font-size:15px;
+	text-align:justify;
+	height:80px;
+}
+.primerElemento{
+	margin-bottom: 0px;
+}
+.segundoElemento{
+	margin-bottom: 100px;
 }

@@ -19,7 +19,7 @@ class agregarController
 
                 <td><input id='categoria' name='idCategoria[]' readonly='readonly' type='text' value='".$respuesta["nombreCategoria"]."'></td> 
 
-                <td> <a href='?action=borrar&id=". $respuesta['idInventario'] ."'>BORRAR </a></td></tr>",
+                <td> <button class='borrar' type='button' id='".$respuesta["idInventario"]."-".$respuesta['nombreProducto']."'>BORRAR</button></td></tr>",
                 "estado"        => true,
             );
 

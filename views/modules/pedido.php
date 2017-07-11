@@ -16,56 +16,74 @@
 
 <div class="container ingresar">
     <form method="post">
-        <div class="col-sm-6 mx-auto">
-            <div class="row">
-            <div class="PedidoBuscador">
+                <div class="mx-auto col-sm-4">
+                    <div class="primerElemento row">
+                
+
                 <!-- AGREGAR PRODUCTO -->
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        <div class="">
-                            <button class="btn btn-primary" id="idAgregar" style="height: 90px;font-size: 12px;" type="button">
-                                AGREGAR
+                <div class="col-sm-5 " style="  padding-right: 0px !important;">
+                    <div class="form-group ">
+                            <button class="btn btn-primary botonAgregar" style="text-align:center;" id="idAgregar" type="button">
+                                AGREGAR 
                             </button>
-                        </div>
+
                     </div>
                 </div>
-                <div class="col-sm-10">
-                    <div class="row">
-
-                        <!-- BUSCAR PRODUCTO -->
-                        <div class="form-group col-sm-5 ">
-                            <div class="">
-                                <input class="form-control" id="idBuscar" placeholder="buscar" type="text" value="">
-                                </input>
-                            </div>
-                        </div>
-                        <!-- CAMBIAR CATEGORIA -->
-                        <div class="form-group col-sm-5 ">
+                        <div class="col-sm-7" style="padding-left: 1px !important;"> 
+                        <div class="row ">
+                        <!-- CAMBIAR CATEGORIA  -->
+                        <div class="form-group col-sm-12" style="margin-bottom: 0 !important;">
                             <input class="form-control" id="idCategoria" type="text">
                             </input>
                         </div>
-                        <!-- ELEGIR PRODUCTO -->
-                        <div class="form-group col-sm-5">
-                            <div class="">
-                                <select class="chosen-select " data-placeholder="Elige un producto" id="idElegir" name="formElegir" placeholder="elegir" value="">
-                                </select>
-                            </div>
-                        </div>
+
                         <!-- CANTIDAD -->
-                        <div class="form-group col-sm-5 ">
-                            <div class="">
-                                <input class="form-control" id="idCantidad" min="1" name="formCantidad" placeholder="cantidad" type="number" value="">
+
+                        <div class="form-group  col-sm-12" style="margin-bottom: 0 !important;">
+                                <input class="form-control"  id="idCantidad" min="1" placeholder="cantidad" type="number" value="">
                                 </input>
                             </div>
+                    </div>
+                     </div>
+                
+            </div>
+        </div>
+
+            <div class="col-sm-4 mx-auto">
+                <div class="row ">
+
+
+                        <!-- BUSCAR PRODUCTO -->
+                        <div class="form-group col-sm-12 ">
+
+                                <input class="form-control" id="idBuscar" placeholder="buscar" type="text" value="">
+                                </input>
+
+                        </div>
+                    </div>
+                    <div class="row segundoElemento">
+                        <!-- ELEGIR PRODUCTO -->
+                        <div class="chosen-seleccion  col-sm-12 ">
+
+                                <select class="chosen-select productoSeleccionado" data-placeholder="Elige un producto" id="idElegir" name="formElegir" placeholder="elegir" value="">
+                                </select>
+ 
                         </div>
                     </div>
                 </div>
-                        </div>
-            </div>
-        </div>
+
+            
+            
+
     </form>
 </div>
 <script>
+$(document).ready(function(){
+    $(".borrar").click(function(){
+        console.log("BIEN LOCO");
+
+    });
+});
 
     $(document).ready(function(){
     $("#idElegir").chosen({width: "100%",disable_search_threshold: 10});

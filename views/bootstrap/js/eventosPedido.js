@@ -152,7 +152,7 @@ function agregar() {
         },
         success: function(data) {
             if (data.estado == true) {
-                console.log("SI LLEGE HASTA ACA");
+
                 $("#idDetalles tfoot").append(data.datos);
                 $("#idElegir").val("");
                 $("#idBuscar").val("");
@@ -160,10 +160,43 @@ function agregar() {
                 $("#idCantidad").val("");
                 $("#idElegir").trigger("chosen:updated");
             } else {
-                console.log("NO NO LLEGE HASTA ACA");
             }
         }
     });
     }
 }
 /*-X-X-X-FIN DE AGREGAR-X-X-X-*/
+
+
+/*-------BORRAR PRODUCTO-------*/
+
+$(document).ready(function(){
+    // esto toma un elemento en caso de un evento on click
+    // incluso si el elemento es nuevo y es agregado dinamicamente atraves de una funcion
+    //cuando un evento click no puede recibir un elemento nuevo y no propio de la pagina base
+    $(document.body).on("click",".borrar",function(){ 
+
+        borrar();
+    });
+});
+    function borrar(){
+
+        var productoABorrar = $(".borrar").attr("id");
+
+        $("#idDetalles tfoot").find("tr").each(function(){
+
+            var productoid =$(this).find("#idProducto").val();
+
+            if (productoid == productoABorrar) {
+            // console.log(productoid);
+            // console.log(productoABorrar);
+            // console.log($(this).find("#"+productoABorrar));
+            // $("#idDetalles tfoot").find('tr[id="'+productoABorrar+'"]').remove();
+//  ACA ESTO NO ANDA NI MIERDA TODO PARA ATRAS NO FUNCIONA 
+//HAY QUE ARREGLARLO PARA QUE BORRE EL TR QUE CORRESPONDA
+
+            }
+        });
+    }
+
+/*-X-X-X-FIN DE BORRAR-X-X-X-*/
